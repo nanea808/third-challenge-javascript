@@ -12,7 +12,7 @@ This is the website layout:
 
 ## Link
 
-[nanea808.github.io/third-challenge-javascript](https://nanea808.github.io/third-challenge-javascript/)
+[nanea808.github.io/third-challenge-javascript/](https://nanea808.github.io/third-challenge-javascript/)
 
 ## Installation
 
