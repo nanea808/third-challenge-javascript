@@ -1,18 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Generate Password
+// Generate Password Function
 function generatePassword() {
-// WHEN prompted for the length of the password
+// prompt for the length of the password
 let passwordLength = prompt("Choose a length of at least 8 characters and no more than 128 characters.");
 if (passwordLength >= 8 && passwordLength <= 128) {
-// THEN I choose a length of at least 8 characters and no more than 128 characters
+  alert("Great choice!")
 } else {
   window.alert("Not a valid length!");
   return;
 }
-// WHEN asked for character types to include in the password
 
+// declare arrays and objects for password character choices
 var characterTypes = ["lowercase", "uppercase", "numeric", "special"];
 var characterArrays = [];
 var characterSets = {
@@ -22,25 +22,33 @@ var characterSets = {
   3: ['!','@','#','$','%','^','&','*']
 }
 
+// ask for character types to include in the password
 var set = 0;
+var atLeastOne = 0;
 for (var x = 0; x < characterTypes.length; x++) {
   let selectType = confirm("Would you like " + characterTypes[x] + " characters to be part of your password?");
   if (selectType) {
     characterArrays[set] = characterSets[x];
     set++
+    atLeastOne++
   }
 }
+
+if (!atLeastOne > 0) {
+  alert("No character types chosen, lowercase and numeric were set by default.");
+  characterArrays[0] = characterSets[0];
+  characterArrays[2] = characterSets[2];
+}
+
 console.log(characterTypes);
-//use Math.floor(Math.random() * max) to select random characters;
+
+// build random password with for loop and Math.random
 var password = "";
 for (var x = 0; x < passwordLength; x++) {
   var randomCharacterSet = characterArrays[Math.floor(Math.random() * characterArrays.length)];
   var randomcharacter = randomCharacterSet[Math.floor(Math.random() * randomCharacterSet.length)];
   password = password + randomcharacter;
 }
-// THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
   return password;
 }
 
