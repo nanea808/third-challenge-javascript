@@ -20,7 +20,7 @@ N/A
 
 ## Usage
 
-This website is meant to display important info about Horiseon Social Solution Sevices. Quick navigation can be found in the top right of the website and all info is listed below.
+
 
 ## Credits
 
