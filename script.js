@@ -37,7 +37,7 @@ for (var x = 0; x < characterTypes.length; x++) {
 if (!atLeastOne > 0) {
   alert("No character types chosen, lowercase and numeric were set by default.");
   characterArrays[0] = characterSets[0];
-  characterArrays[2] = characterSets[2];
+  characterArrays[1] = characterSets[2];
 }
 
 console.log(characterTypes);
